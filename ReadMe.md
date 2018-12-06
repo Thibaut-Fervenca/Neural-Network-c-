@@ -4,8 +4,8 @@ Multilayered feedforward neural network, work for linear problem or non-linear.
 
 ***
 
-- [Todo](#Todo)
-- [References](#References)
+- [Todo](#Todo-:)
+- [References](#References-:)
     
 
 ***
