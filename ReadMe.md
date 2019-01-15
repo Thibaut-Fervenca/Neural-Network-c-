@@ -4,8 +4,9 @@ Multilayered feedforward neural network, work for linear problem or non-linear.
 
 ***
 
-- [Todo](#Todo)
-- [References](#References)
+- [Neural Network c++](#neural-network-c)
+- [Todo](#todo)
+- [References](#references)
     
 
 ***
@@ -14,9 +15,8 @@ Multilayered feedforward neural network, work for linear problem or non-linear.
 
 - [X] Random class
 - [X] NeuralSection class
-- [ ] NeuralNetwork class  
-- [ ] Test for linear problem `` (or |  and &) ``
-- [ ] Test for non-linear problem  `` XOR `` 
+- [X] NeuralNetwork class  
+- [X] Test for non-linear problem  `` XOR `` 
 
 # References
 

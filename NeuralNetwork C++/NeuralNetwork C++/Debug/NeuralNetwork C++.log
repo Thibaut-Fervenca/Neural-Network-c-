@@ -1,5 +1,2 @@
-﻿  NeuralNetwork.cpp
-d:\svn\2018-2019\sections\prog3b\etudiants\thibaut fervenca\projet personnel\neuralnetwork c++\neuralnetwork c++\neuralnetwork.cpp(21): warning C4018: '<' : incompatibilité signed/unsigned
-d:\svn\2018-2019\sections\prog3b\etudiants\thibaut fervenca\projet personnel\neuralnetwork c++\neuralnetwork c++\neuralnetwork.cpp(38): warning C4018: '<' : incompatibilité signed/unsigned
-d:\svn\2018-2019\sections\prog3b\etudiants\thibaut fervenca\projet personnel\neuralnetwork c++\neuralnetwork c++\neuralnetwork.cpp(55): warning C4018: '<' : incompatibilité signed/unsigned
-  NeuralNetwork C++.vcxproj -> D:\SVN\2018-2019\Sections\Prog3B\Etudiants\Thibaut Fervenca\Projet Personnel\NeuralNetwork C++\Debug\NeuralNetwork C++.exe
+﻿  NeuralNetwork C++.cpp
+  NeuralNetwork C++.vcxproj -> D:\SVN\2018-2019\Sections\Prog3B\Etudiants\Thibaut Fervenca\Projet Personnel\Git C++ NeuralNetwork\Neural-Network-c-\NeuralNetwork C++\Debug\NeuralNetwork C++.exe

@@ -55,10 +55,11 @@ NeuralSection::NeuralSection(NeuralSection * _Main)
 {
 	randomizer = _Main->randomizer;
 	
+	InputCount = _Main->InputCount;
+	OutputCount = _Main->OutputCount;
 
-
-	*Weights = new double[InputCount + 1]; // +1 for bias
-	for (int i = 0; i < InputCount + 1; i++)
+	Weights = new double*[InputCount]; 
+	for (int i = 0; i < InputCount; i++)
 	{
 		Weights[i] = new double[OutputCount];
 	}
@@ -74,6 +75,31 @@ NeuralSection::NeuralSection(NeuralSection * _Main)
 
 
 }
+
+void NeuralSection::Copy(NeuralSection* _ToCopy)
+{
+	_ToCopy->randomizer = randomizer;
+
+	_ToCopy->InputCount = InputCount;
+	_ToCopy->OutputCount = OutputCount;
+
+	//_ToCopy->Weights = new double*[_ToCopy->InputCount];
+	/*for (int i = 0; i < _ToCopy->InputCount; i++)
+	{
+		_ToCopy->Weights[i] = new double[OutputCount];
+	}*/
+
+	// Set Weights
+	for (int i = 0; i < _ToCopy->InputCount; i++)
+	{
+		for (int j = 0; j < _ToCopy->OutputCount; j++)
+		{
+			_ToCopy->Weights[i][j] = Weights[i][j];
+		}
+	}
+}
+
+
 
 std::string NeuralSection::ToString()
 {
@@ -108,6 +134,11 @@ double * NeuralSection::FeedForward(double * _Input)
 
 	double* Output = new double[OutputCount];
 
+	for (int i = 0; i < OutputCount; i++)
+	{
+		Output[i] = 0; //or getting weird number
+	}
+
 	//Calculate Weights * input;
 	for (int i = 0; i < InputCount; i++)
 	{
@@ -119,7 +150,7 @@ double * NeuralSection::FeedForward(double * _Input)
 			}
 			else
 			{
-				Output[j] += Weights[i][j] * _Input[j];
+				Output[j] += Weights[i][j] * _Input[i];
 			}
 		}
 
@@ -154,7 +185,7 @@ void NeuralSection::Mutate(double Mutationpropability, double MutationAmount)
 		{
 			if (randomizer->NextDouble() < Mutationpropability)
 			{
-				Weights[i][j] = randomizer->NextDouble() * (MutationAmount);
+				Weights[i][j] = randomizer->NextDouble() * (MutationAmount * 2.0) - MutationAmount;
 			}
 		}
 	}

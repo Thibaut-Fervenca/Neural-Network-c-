@@ -12,6 +12,12 @@ public:
 
 	std::string ToString();
 
+	double* FeedForward(double* _input);
+
+	void Mutate(double MutationProbability = 0.3, double MutationAmount = 2.0);
+
+	void Copy(NeuralNetwork* _ToCopy);
+
 private :
 	
 	uint32_t *Topology;
